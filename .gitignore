@@ -1,0 +1,6 @@
+*.png
+*.json
+*.bin
+*.toc
+*.cue
+__pycache__
