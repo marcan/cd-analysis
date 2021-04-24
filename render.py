@@ -23,7 +23,7 @@ for k, v in data["errors"].items():
     elif v["subc"] and pix[k] is not True:
         pix[k] += v["subc"]
 
-im = Image.new("RGB", (w, h))
+im = Image.new("RGB", (w, h), (255, 0, 255))
 
 d = bytearray(w * h * 3)
 
@@ -50,4 +50,4 @@ im = Image.frombytes("RGB", (h, w), bytes(d))
 im = im.transpose(Image.TRANSPOSE)
 im = im.resize((w * 2, h * 2), resample=Image.NEAREST)
 im.save(f_out)
-im.show()    
+#im.show()
